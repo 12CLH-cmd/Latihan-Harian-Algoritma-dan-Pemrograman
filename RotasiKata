@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+void input(int &n, int &panjang) {
+    cin >> panjang;
+    cin >> n;
+}
+
+void rotatee(int n, int panjang) {
+    int arr[panjang];
+    for (int i = 0; i < panjang; i++) {
+        cin >> arr[i];
+    }
+    for (int i = panjang - n; i < panjang; i++) {
+        cout << arr[i];
+    }
+    for (int i = 0; i < panjang - n; i++) {
+        cout << arr[i];
+    }
+}
+
+
+int main () {
+    int n;
+    int panjang;
+    input(n, panjang);
+    rotatee(n, panjang);
+}
