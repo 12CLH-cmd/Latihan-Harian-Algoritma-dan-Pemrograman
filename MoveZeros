@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+void moveZeros (int arr[], int ukuran) {
+    int posisi = 0;
+
+    for (int i = 0; i < ukuran; i++) {
+        if (arr[i] != 0) {
+            arr[posisi] = arr[i];
+            posisi++;
+        }
+    }
+    while (posisi < ukuran) {
+        arr[posisi] = 0;
+        posisi++;
+    }
+}
+
+void cetakArray (int arr[], int ukuran) {
+    for (int i = 0; i < ukuran; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+int main () {
+    int ukuran;
+    cin >> ukuran;
+
+    int arr[1000];
+
+    for (int i = 0; i < ukuran; i++) {
+        cin >> arr[i];
+    }
+
+    moveZeros(arr, ukuran);
+    cetakArray(arr, ukuran);
+
+    return 0;
+}
